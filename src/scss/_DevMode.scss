@@ -1,0 +1,14 @@
+// DevMode
+
+.devmode-page {
+    @include pageContainer();
+}
+
+.setup-page__row {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        flex: 1;
+    }
+}

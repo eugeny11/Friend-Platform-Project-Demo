@@ -1,0 +1,35 @@
+// Cookie
+
+.cookie {
+    border-radius: 16px;
+    background: $gradient-glass;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    // box-shadow: 1px 1px 6px rgba(28, 16, 33, 0.32);
+
+    backdrop-filter: blur(15px);
+
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 30px 130px;
+
+    position: fixed;
+    bottom: 24px;
+    z-index: 100;
+
+    display: flex;
+
+    transition: all 3s;
+
+    p {
+        padding-right: 86px;
+    }
+
+    button {
+        align-self: flex-end;
+    }
+}
+
+.cookie_accepted {
+    opacity: 0;
+    bottom: -100vh;
+}

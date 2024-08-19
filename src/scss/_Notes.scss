@@ -1,0 +1,39 @@
+// Note page
+
+@mixin pageContainer {
+    padding: 40px 65px 40px 40px;
+}
+
+.notes {
+    @include pageContainer();
+
+    .input {
+        width: 100%;
+    }
+}
+
+.notes__cards {
+    height: 200px;
+}
+
+.note {
+    border: 1px solid #c2b9c6;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 15px;
+    font-family: $font-light;
+    font-size: 1rem;
+    width: 100%;
+    color: $color-text-black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note_date {
+    color: $color-text-secondary;
+    margin-right: 15px;
+}
+
+.note_date_and_title {
+    display: flex;
+}

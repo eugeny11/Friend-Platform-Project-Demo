@@ -1,0 +1,32 @@
+// Breadcrumbs
+
+.breadcrumbs {
+    font-size: 0.8125rem;
+    color: $color-text-secondary;
+
+    a,
+    a:hover,
+    a:active,
+    a:visited,
+    a:focus {
+        font-size: 0.8125rem;
+        color: $color-text-secondary;
+    }
+
+    li {
+        display: inline;
+    }
+    li::after {
+        content: url("../img/long_arrow_r.svg");
+        width: 31px;
+        height: 5px;
+        margin: 0 20px;
+    }
+    li.activ {
+        color: $color-text-black;
+    }
+    li.activ::after {
+        content: none;
+        margin: 0;
+    }
+}

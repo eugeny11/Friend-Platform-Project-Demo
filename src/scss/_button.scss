@@ -1,0 +1,154 @@
+// buttons
+
+.button {
+    border-radius: 32px;
+    border: none;
+    font-family: $font-regular;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+// button size
+
+.button_l {
+    height: 65px;
+    font-size: 1.25rem;
+    padding: 0 32px;
+}
+
+.button_m {
+    height: 56px;
+    font-size: 1.125rem;
+    padding: 0 28px;
+}
+
+.button_s {
+    height: 48px;
+    font-size: 0.875rem;
+    padding: 0 24px;
+}
+
+.button_xs {
+    height: 36px;
+    font-size: 0.75rem;
+    padding: 0 18px;
+}
+
+//primary button
+
+.button_primary {
+    background-color: $color-button-primary;
+    color: $color-white;
+}
+
+.button_primary:hover {
+    background-color: $color-button-primary-hover;
+}
+
+.button_primary:focus {
+    background-color: $color-button-primary-focus;
+}
+
+.button_primary:active {
+    background-color: $color-button-primary-active;
+    box-shadow: inset 4px 6px 6px rgba(28, 16, 33, 0.32);
+}
+
+.button_primary:disabled {
+    background-color: $color-button-disabled;
+    box-shadow: none;
+    cursor: auto;
+}
+
+// secondary button
+
+.button_secondary {
+    border: 2px solid $color-button-secondary-normal;
+    color: $color-button-secondary-normal;
+    background-color: $color-button-secondary-normal-bg;
+}
+
+.button_secondary:focus {
+    border-color: $color-button-secondary-focused-stroke;
+    color: $color-button-secondary-focused-stroke;
+    background-color: $color-button-secondary-focused;
+}
+
+.button_secondary:hover {
+    border-color: $color-button-secondary-hover;
+    color: $color-button-secondary-hover;
+    background-color: $color-button-secondary-normal-bg;
+}
+
+.button_secondary:active {
+    border: none;
+    border-color: $color-button-secondary-active;
+    color: $color-white;
+    background-color: $color-button-secondary-active;
+    box-shadow: inset 4px 6px 6px rgba(28, 16, 33, 0.32);
+}
+
+.button_secondary:disabled {
+    border-color: $color-button-secondary-disabled;
+    color: $color-button-secondary-disabled;
+    background-color: $color-button-secondary-normal-bg;
+    cursor: auto;
+}
+
+// tertiary button
+
+.button_tertiary {
+    background: $color-button-secondary-normal-bg;
+    color: $color-text-secondary;
+    position: relative;
+}
+
+.button_tertiary:hover {
+    background: $color-button-tertiary-hover;
+    color: $color-text-black;
+    box-shadow: $shadow-2;
+}
+
+.button_tertiary:focus {
+    color: $color-text-black;
+    text-decoration: underline;
+    border: none;
+}
+
+.button_tertiary:active {
+    color: $color-white;
+    background-color: $color-button-tertiary-active;
+    text-decoration: none;
+}
+
+.button_tertiary:disabled {
+    color: $color-text-disabled;
+    background-color: $color-button-secondary-normal-bg;
+    cursor: auto;
+}
+
+// icon right
+
+.button_tertiary_icon-right {
+    padding-right: 47px;
+}
+
+.button_tertiary_icon-right::after {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+}
+
+.button_tertiary_icon-right::after {
+    content: url(../img/arrow_right_small_gray.svg);
+}
+
+.button_tertiary_icon-right:hover::after,
+.button_tertiary_icon-right:focus::after {
+    content: url(../img/arrow_right_small_black.svg);
+}
+
+.button_tertiary_icon-right:active::after {
+    content: url(../img/arrow_right_small_white.svg);
+}

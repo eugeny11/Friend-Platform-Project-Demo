@@ -1,0 +1,113 @@
+//Chat room
+
+.chat-room-container {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+
+    button {
+        margin-top: 20px;
+    }
+}
+
+.room-name {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: $color-text-secondary-light;
+    font-weight: 100;
+}
+
+.messages-container {
+    flex: 1;
+    min-height: 100px;
+    overflow: auto;
+    // border: 1px solid black;
+    border-radius: 7px 7px 0 0;
+}
+
+.messages-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.new-message-input-field {
+    font-family: $font-regular;
+    height: 100px;
+    max-height: 50%;
+    font-size: 1rem;
+    padding: 8px 12px;
+    resize: none;
+    border-radius: 16px;
+    border: $color-button-secondary-normal-bg solid 1px;
+}
+
+.message-item {
+    width: 55%;
+    margin: 8px;
+    padding: 12px 8px;
+    word-break: break-word;
+    border-radius: 4px;
+    color: white;
+}
+
+.my-message {
+    color: $color-primary-first;
+    margin-left: auto;
+}
+
+.received-message {
+    color: $color-primary-second;
+    margin-right: auto;
+}
+
+// .send-message-button {
+//     font-size: 28px;
+//     font-weight: 600;
+//     color: white;
+//     background: #31a24c;
+//     padding: 24px 12px;
+//     border: none;
+// }
+
+.messages-container,
+.new-message-input-field,
+.send-message-button {
+    border-color: #9a9a9a;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 9;
+
+    a {
+        display: flex;
+        align-items: center;
+        @extend .button_primary;
+        margin-top: 20px;
+    }
+}
+
+.text-input-field {
+    padding: 24px 12px;
+    border-radius: 7px;
+    font-size: 24px;
+}
+
+.text-input-field:focus {
+    outline: none;
+}
+
+.enter-room-button {
+    margin-top: 20px;
+    padding: 24px 12px;
+    font-size: 28px;
+    background: #31a24c;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+}

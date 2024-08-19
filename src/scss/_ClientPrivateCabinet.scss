@@ -1,0 +1,277 @@
+.client__private__page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__compilation__section {
+        margin-top: 29px;
+        display: flex;
+        width: 100%;
+    }
+    &__notes__and__meetings__section {
+        width: 100%;
+        margin-top: 29px;
+        display: flex;
+        .notes__section {
+            width: 60%;
+            &__write {
+                margin-top: 24px;
+                padding: 8px 20px;
+                border: 1px solid $color-button-secondary-normal;
+                border-radius: 16px;
+                &-header {
+                    font-size: 12px;
+                    color: $color-text-secondary;
+                }
+                &-thoughts {
+                    margin-top: 8px;
+                    font-size: 16px;
+                    color: $color-text-black;
+                    margin-bottom: 90px;
+                }
+                &-open {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 15px;
+                }
+            }
+        }
+        .meetings__section {
+            display: flex;
+            width: 28%;
+            flex-direction: column;
+            margin-left: 30px;
+            &-open {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+            }
+            .my__meetings {
+                display: flex;
+                margin-top: 24px;
+                flex-direction: column;
+                border-radius: 16px;
+                padding: 5px 10px;
+                background: $gradient-purple;
+                &-part {
+                    display: flex;
+                    background-color: $color-white;
+                    flex-direction: column;
+                    border: 1px solid $color-button-secondary-normal;
+                    border-radius: 16px;
+                    padding: 8px 10px;
+                    margin-bottom: 8px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .part-date {
+                        font-size: 12px;
+                        color: $color-text-secondary;
+                        margin-bottom: 5px;
+                    }
+                    .part-time {
+                        font-size: 16px;
+                        color: $color-text-black;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+    .often__questions__section {
+        margin-top: 29px;
+        width: 100%;
+        &-header {
+            margin-bottom: 24px;
+        }
+        .questions__list {
+            width: 90%;
+            background-color: $color-white;
+            border-radius: 32px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: $shadow-4;
+            margin-bottom: 40px;
+            &__item {
+                margin-bottom: 16px;
+                :last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__support {
+        display: flex;
+        font-size: 18px;
+        color: $color-text-secondary;
+        margin-bottom: 98px;
+        align-items: center;
+        img {
+            margin-right: 16px;
+        }
+    }
+}
+
+.variants_list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.variants_list ul li:before {
+    content: "•";
+    margin-right: 6px;
+}
+
+.question__list__item {
+    margin-bottom: 16px;
+    &-title {
+        padding: 20px;
+        font-size: 18px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $color-text-disabled;
+        color: $color-primary-second;
+        border-radius: 16px;
+        width: 90%;
+    }
+    &-desc {
+        padding: 16px 20px;
+        width: 90%;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        font-size: 18px;
+        font-family: $font-bold;
+        color: $color-text-white;
+        background: $gradient-purple;
+        display: flex;
+        flex-direction: column;
+        .item-desc {
+            &-title {
+                display: flex;
+
+                color: $color-white;
+                justify-content: space-between;
+                width: 100%;
+                font-size: 18px;
+                font-family: $font-bold;
+                .desc-title-info {
+                    .title-and-button {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+            &-options {
+                margin-top: 12px;
+                display: flex;
+                flex-direction: column;
+                &-string {
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    color: $color-white;
+                    font-size: 16px;
+                    label::before {
+                        content: "";
+                        position: absolute;
+                        cursor: pointer;
+                        top: 3px;
+                        left: 0;
+                        color: white;
+                        width: 16px;
+                        height: 16px;
+                        border: 0.2px solid $color-button-secondary-normal;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    input:checked ~ label::before {
+                        content: "\2713";
+                        cursor: pointer;
+                        text-align: center;
+                        color: white;
+                        background: $gradient-green;
+                        display: inline-flex;
+                        justify-content: center;
+                    }
+                    :last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.client__private-header {
+    font-size: 18px;
+    font-family: $font-bold;
+    color: $color-text-black;
+}
+
+.compilation__section {
+    &__left {
+        padding: 12px;
+        width: 60%;
+        border: 1px solid #ffffff;
+        box-shadow: $shadow-5;
+        border-radius: 16px;
+        background-image: url(../img/compilation_section.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        &-header {
+            color: $color-text-secondary;
+        }
+        &-quest {
+            margin-top: 12px;
+        }
+        &-complete {
+            color: $color-text-black;
+            font-size: 16px;
+            margin-top: 4px;
+        }
+    }
+    &__right {
+        width: 25%;
+        display: flex;
+        padding: 16px 12px;
+        background: $gradient-purple;
+        border-radius: 16px;
+        &-img {
+            width: 133px;
+            height: 133px;
+            background-image: url(../img/compilation_psycho.png);
+        }
+        &-psycho {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .psycho__header {
+                font-size: 22px;
+                font-family: $font-bold;
+                color: $color-text-white;
+            }
+            .psycho_button {
+                padding: 10px 30px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.complete_button {
+    padding: 10px 30px;
+    margin-top: 28px;
+}
+
+.desc-p {
+    margin-top: 15px;
+    display: block;
+}

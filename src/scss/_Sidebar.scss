@@ -1,0 +1,152 @@
+// Sidebar
+
+.sidebar {
+    min-width: 332px;
+    padding: 0 14px;
+    box-shadow: 0px 16px 24px rgba(13, 11, 14, 0.05);
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+		font-family: $font-nunito-light;
+}
+
+.sidebar__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar__nav-btn {
+    background-color: white;
+}
+.user-photo {
+    width: 120px;
+    height: 120px;
+    background-color: $color-bg-disabled;
+    border-radius: 50%;
+    background-image: url(../img/icon_pen.svg);
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto;
+}
+.sidebar__progressbar {
+    width: calc(100% - 10px);
+    margin: 0 5px;
+    
+		p {
+			font-size: 0.875rem;
+			color: $color-text-secondary;
+    }
+
+		&-legend {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		&-nums {
+			color: #20D58E;
+		} 
+}
+.sidebar__progressbar-done,
+.sidebar__progressbar-body {
+    display: block;
+    height: 5px;
+    border-radius: 5px;
+}
+.sidebar__progressbar-body {
+    width: 100%;
+    background-color: $color-bg-disabled;
+}
+.sidebar__progressbar-done {
+    background-color: $color-primary-first;
+}
+.sidebar__username {
+    margin: 30px auto 24px;
+    text-align: center;
+
+    h6 {
+        color: $color-primary-violet-tone-darck;
+    }
+}
+.username-btn {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/icon_pen.svg) center center no-repeat;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+.sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 19px;
+    height: calc(100vh - 340px);
+    max-height: 475px;
+    margin-bottom: auto;
+
+    a {
+        display: flex;
+        align-items: center;
+        @extend .button;
+        @extend .button_l;
+        @extend .button_tertiary;
+    }
+    a:hover {
+        @extend .button_tertiary, :hover;
+    }
+    a:focus {
+        @extend .button_tertiary, :focus;
+    }
+    a:active {
+        @extend .button_tertiary, :active;
+    }
+
+    @mixin link-img($url) {
+        text-align: left;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: 20px center;
+        padding-left: 60px;
+    }
+
+    .sidebar__menu-questionnaire,
+    .sidebar__menu-questionnaire:hover,
+    .sidebar__menu-questionnaire:active,
+    .sidebar__menu-questionnaire:focus {
+        @include link-img("../img/icon_document_2.svg");
+    }
+    .sidebar__menu-note,
+    .sidebar__menu-note:hover,
+    .sidebar__menu-note:active,
+    .sidebar__menu-note:focus {
+        @include link-img("../img/icon_document.svg");
+    }
+    .sidebar__menu-meeting,
+    .sidebar__menu-meeting:hover,
+    .sidebar__menu-meeting:active,
+    .sidebar__menu-meeting:focus {
+        @include link-img("../img/icon_calendar.svg");
+    }
+    .sidebar__menu-chat,
+    .sidebar__menu-chat:hover,
+    .sidebar__menu-chat:active,
+    .sidebar__menu-chat:focus {
+        @include link-img("../img/icon_envelope.svg");
+    }
+    .sidebar__menu-faq,
+    .sidebar__menu-faq:hover,
+    .sidebar__menu-faq:active,
+    .sidebar__menu-faq:focus {
+        @include link-img("../img/icon_info.svg");
+    }
+    .sidebar__menu-support,
+    .sidebar__menu-support:hover,
+    .sidebar__menu-support:active,
+    .sidebar__menu-support:focus {
+        @include link-img("../img/icon_headset.svg");
+    }
+}

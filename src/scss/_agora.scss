@@ -1,0 +1,30 @@
+// Agora video chat
+
+.vid {
+    position: relative;
+    background-color: black;
+    height: 600px;
+    width: 95%;
+    border: 1px solid #38373a;
+}
+#videos {
+    position: relative;
+    height: 85vh;
+    width: 100vw;
+    margin: auto;
+    align-self: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+#local_videos {
+    position: relative;
+    height: 30vh;
+    width: 20vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    justify-items: center;
+    align-items: center;
+}
